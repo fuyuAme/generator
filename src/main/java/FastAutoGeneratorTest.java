@@ -17,8 +17,8 @@ public class FastAutoGeneratorTest {
     public static void main(String[] args) {
         //1、配置数据源
         FastAutoGenerator
-                .create("jdbc:mysql://ip/community?characterEncoding=utf-8&useSSL=false&serverTimezone=Shanghai",
-                        "root", "123")
+                .create("jdbc:mysql://94.74.110.135/community?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai",
+                        "root", "root")
                 //2、全局配置
                 .globalConfig(builder -> {
                     builder.author("yu.zhou") // 设置作者名
@@ -45,7 +45,7 @@ public class FastAutoGeneratorTest {
                 })
                 //4、策略配置
                 .strategyConfig(builder -> {
-                    builder.addInclude("comment", "message") // 设置需要生成的数据表名
+                    builder.addInclude("user") // 设置需要生成的数据表名
 //                            .addTablePrefix("t_", "c_") // 设置过滤表前缀
 
                             //4.1、Mapper策略配置
